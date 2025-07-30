@@ -1,0 +1,15 @@
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.orm import relationship
+from online_cinema.db.base_class import Base
+
+class User(Base):
+    __tablename__ = "users"
+
+    id = Column(Integer, primary_key=True, index=True)
+    email = Column(String, unique=True, index=True, nullable=False)
+    full_name = Column(String, nullable=True)
+    hashed_password = Column(String, nullable=False)
+
+    carts = relationship("Cart", back_populates="user", uselist=False)
+    orders = relationship("Order", back_populates="user")
+    payments = relationship("Payment", back_populates="user")
