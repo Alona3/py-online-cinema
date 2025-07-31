@@ -1,15 +1,23 @@
 from pydantic import BaseModel, EmailStr
 from typing import Optional
+from datetime import datetime
+from enum import Enum
+
+
+class UserGroupEnum(str, Enum):
+    USER = "USER"
+    MODERATOR = "MODERATOR"
+    ADMIN = "ADMIN"
 
 class UserBase(BaseModel):
     email: EmailStr
-    full_name: Optional[str] = None
+    is_active: bool
 
-class UserCreate(UserBase):
-    password: str
-
-class UserRead(UserBase):
+class UserResponse(UserBase):
     id: int
+    group: UserGroupEnum
+    created_at: datetime
+    updated_at: datetime
 
     class Config:
         orm_mode = True
