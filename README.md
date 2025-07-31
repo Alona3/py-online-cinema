@@ -37,29 +37,6 @@ This project is a part of an **Online Cinema Platform**, focusing on user regist
 
 ---
 
-## 🗂️ Project Structure
-├── alembic/ # Alembic migrations
-├── online_cinema/
-│ ├── api/ # FastAPI endpoints
-│ ├── models/ # SQLAlchemy models
-│ ├── schemas/ # Pydantic schemas
-│ ├── services/ # Business logic (tokens, email)
-│ ├── tasks/ # Celery tasks
-│ ├── utils/ # Security helpers
-│ ├── config.py # App configuration
-│ ├── database.py # DB connection
-│ ├── dependencies.py # Dependency injection
-│ ├── main.py # FastAPI entry point
-│ └── middlewares.py # Middleware (CORS, logging)
-├── celery_worker.py # Celery entry point
-├── requirements.txt
-├── .env
-├── README.md
-└── tests/
-
-
----
-
 ## ⚙️ Setup & Run
 
 ### 1. **Clone the repository**
