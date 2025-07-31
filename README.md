@@ -42,5 +42,5 @@ This project is a part of an **Online Cinema Platform**, focusing on user regist
 ### 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/your-username/online-cinema-auth.git
+git clone https://github.com/Alona3/online-cinema-auth.git
 cd online-cinema-auth
