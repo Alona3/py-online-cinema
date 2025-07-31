@@ -4,3 +4,7 @@ sqlalchemy
 pydantic
 celery
 redis
+pytest
+pytest-asyncio
+httpx
+coverage
